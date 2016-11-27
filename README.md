@@ -89,32 +89,61 @@
 >关于html的全局属性可以参阅以下网站：  
 [http://www.w3school.com.cn/tags/html_ref_standardattributes.asp](http://www.w3school.com.cn/tags/html_ref_standardattributes.asp)  
 
-##5.html样式
-* style 属性提供了一种改变所有 HTML 元素的样式的通用方法.  
+##5.html样式    
+` 当浏览器读到一个样式表，它就会按照这个样式表来对文档进行格式化。有以下三种方式来插入样式表：`
 
->样式的实例： 
->>1.背景颜色
+1.内联样式              
+当特殊的样式需要应用到**个别元素**时，就可以使用内联样式。               
+使用内联样式的方法是在相关的标签中使用**样式属性**。                 
+样式属性可以包含任何 CSS 属性.           
+>例子：
+* \<p>元素
+                                                                                                                                    
+    <p style="color: red; margin-left: 20px">This is a paragraph</p>      
+                 
+  > style 属性提供了一种改变所有 HTML 元素的样式的通用方法. 
 
-        <h2 style="background-color:red">This is a heading</h2>       //文字的背景颜色变为红色
->>2.文本的字体、颜色和尺寸
+  >样式的实例： 
+  >>1.背景颜色								
 
-        <p style="font-family:arial;color:red;font-size:20px;">A paragraph.</p>             
->>3.文本对齐
+     	<h2 style="background-color:red">This is a heading</h2>       //文字的背景颜色变为红色
+        
+  >>2.文本的字体、颜色和尺寸				
+
+        <p style="font-family:arial;color:red;font-size:20px;">A paragraph.</p>     
+        
+  >>3.文本对齐				
 
         <h1 style="text-align:center">This is a heading</h1>
 
 
+2.内部样式表                             
+当单个文件需要特别样式时，就可以使用内部样式表。你可以在 head 部分通过** \<style> 标签**定义内部样式表. 				    	     
+  
+       <head>
+       <style type="text/css">
+        body {background-color: red}
+        p {margin-left: 20px}
+       </style>
+       </head>  
+3.外部样式表                     
+当样式需要被应用到很多页面的时候，外部样式表将是理想的选择。使用外部样式表，你就可以通过**更改一个文件**来改变整个站点的外观.				    
+  
+       <head>
+       <link rel="stylesheet" type="text/css" href="mystyle.css">
+       </head>  
+       
 >详细的样式应该用css文件（样式表）定义，具体css学习见：   
 [http://www.w3school.com.cn/css/index.asp](http://www.w3school.com.cn/css/index.asp)
 
 ##6.html的型式化
-* HTML 定义了很多供型式化输出的元素以供使用  
+* HTML 定义了很多供型式化输出的**元素**以供使用  
 * 用以型式化的元素可以分为三类：    
 
 >1.直接型式化                                            
 [http://www.w3school.com.cn/html/html_formatting.asp](http://www.w3school.com.cn/html/html_formatting.asp)                         
 2.'计算机输出'型式化                                
-[http://www.w3school.com.cn/html/html_computercode_elements.asp](http://www.w3school.com.cn/html/html_computercode_elements.asp)          
+[http://www.w3school.com.cn/html/html_computercode_elements.asp](http://www.w3school.com.cn/html/html_computercode_elements.asp)         
 3.'引用和术语定义'型式化                                         
 [http://www.w3school.com.cn/html/html_quotation_elements.asp](http://www.w3school.com.cn/html/html_quotation_elements.asp)                    
 
